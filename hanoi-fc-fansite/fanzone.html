@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fan Zone · Áo Tím</title>
+  <meta name="description" content="Hà Nội FC quiz, player poll and score predictor.">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Navigation (same on every page) ===== -->
+<nav class="navbar navbar-expand-lg navbar-at sticky-top" data-bs-theme="dark" aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand" href="HomePage.html">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 4l-7 4 3 7 3-1.5V28h12V13.5l3 1.5 3-7-7-4c-.6 2-2.6 3.3-5 3.3S11.6 6 11 4z" fill="#7a3fc0" stroke="#f2b705" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span><span class="brand-name">Áo Tím</span><span class="brand-sub">Hà Nội FC fan site</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="HomePage.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html"><i class="bi bi-clock-history me-1"></i>History</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="fanzone.html"><i class="bi bi-patch-question me-1"></i>Fan Zone</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html"><i class="bi bi-play-btn me-1"></i>Media</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <header class="page-hero" style="background-image:url('img/tactics-board.jpg')">
+    <div class="container">
+      <span class="eyebrow eyebrow-gold">Page 4 of 5 · Quiz, poll and predictor · Góc người hâm mộ</span>
+      <h1>Fan Zone</h1>
+      <p>Test what you know about Hà Nội FC, vote for the best player of the season so far, and predict the score of the next match.</p>
+    </div>
+  </header>
+
+  <section class="container py-4 py-lg-5">
+    <div class="row g-4">
+      <!-- ===== Quiz ===== -->
+      <div class="col-lg-7">
+        <div class="quiz-card" id="quiz" aria-live="polite">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="eyebrow" id="q-label">Question 1 of 10</span>
+            <span class="small text-secondary">Score: <b id="q-score" class="tabular">0</b> · Best: <b id="q-best" class="tabular">–</b></span>
+          </div>
+          <div class="progress quiz-progress mt-2" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="q-progress-wrap">
+            <div class="progress-bar" id="q-progress" style="width:0%"></div>
+          </div>
+
+          <div id="q-play">
+            <p class="quiz-q" id="q-text">Loading the first question…</p>
+            <div class="d-grid gap-2" id="q-options"></div>
+            <div class="alert mt-3 mb-0" id="q-feedback" hidden></div>
+            <div class="d-flex justify-content-end mt-3">
+              <button type="button" class="btn btn-primary" id="q-next" hidden>Next question <i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <div id="q-end" class="text-center py-3" hidden>
+            <span class="eyebrow">Full time</span>
+            <div class="score-big mt-2"><span id="q-final">0</span>/10</div>
+            <p class="lead mt-2 mb-4" id="q-message"></p>
+            <button type="button" class="btn btn-gold btn-lg" id="q-restart"><i class="bi bi-arrow-repeat me-2"></i>Play again</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Poll + predictor ===== -->
+      <div class="col-lg-5">
+        <div class="panel mb-4" id="poll">
+          <span class="eyebrow">Poll · Cầu thủ xuất sắc</span>
+          <h2 class="h4 mt-1 mb-3">Who has been our best player in 2026/27 so far?</h2>
+          <div class="d-grid gap-2" id="poll-options"></div>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="small text-secondary" id="poll-total">No votes yet on this device.</span>
+            <button type="button" class="btn btn-sm btn-outline-primary" id="poll-reset">Clear my votes</button>
+          </div>
+          <p class="small text-secondary mt-3 mb-0"><i class="bi bi-info-circle me-1"></i>Demo poll: votes are saved on this device only. On a live site they would be sent to a server and added to every other fan’s votes.</p>
+        </div>
+
+        <form class="panel" id="predict" novalidate>
+          <span class="eyebrow">Score predictor · Dự đoán</span>
+          <h2 class="h4 mt-1 mb-3">Đồng Nai City v Hà Nội FC</h2>
+          <p class="small text-secondary">Saturday 21 November 2026, 18:00</p>
+          <div class="row g-2 align-items-end">
+            <div class="col-5">
+              <label class="form-label small" for="p-home">Đồng Nai City</label>
+              <input class="form-control form-control-lg text-center" type="number" id="p-home" min="0" max="15" required inputmode="numeric">
+            </div>
+            <div class="col-2 text-center pb-2 fw-bold">–</div>
+            <div class="col-5">
+              <label class="form-label small" for="p-away">Hà Nội FC</label>
+              <input class="form-control form-control-lg text-center" type="number" id="p-away" min="0" max="15" required inputmode="numeric">
+            </div>
+            <div class="col-12">
+              <div class="text-danger small mt-1" id="p-error" hidden>Enter a whole number from 0 to 15 for both teams.</div>
+            </div>
+            <div class="col-12 mt-2">
+              <label class="form-label small" for="p-scorer">First Hà Nội FC scorer</label>
+              <select class="form-select" id="p-scorer">
+                <option value="">No Hà Nội FC goal / not sure</option>
+                <option>Nguyễn Văn Quyết</option><option>Đỗ Hoàng Hên</option><option>Nguyễn Hai Long</option>
+                <option>Aymeric Faurand-Tournaire</option><option>Andrew Jung</option><option>Nguyễn Văn Tùng</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-grid mt-3"><button type="submit" class="btn btn-primary">Save my prediction</button></div>
+          <div class="alert alert-light border mt-3 mb-0" id="p-saved" hidden></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Footer (same on every page) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-4"><strong>Áo Tím</strong><div>Unofficial Hà Nội FC fan site</div></div>
+      <div class="col-md-8 text-md-end">
+        Not affiliated with Hà Nội FC, T&amp;T Group or the V.League. Facts checked 8 November 2026.
+      </div>
+    </div>
+  </div>
+</footer>
+<button type="button" id="to-top" class="btn btn-gold rounded-circle" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/fanzone.js"></script>
+</body>
+</html>

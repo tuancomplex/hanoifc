@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club History · Áo Tím</title>
+  <meta name="description" content="The history of Hà Nội FC from 2006 to today, as an interactive timeline.">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Navigation (same on every page) ===== -->
+<nav class="navbar navbar-expand-lg navbar-at sticky-top" data-bs-theme="dark" aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand" href="HomePage.html">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 4l-7 4 3 7 3-1.5V28h12V13.5l3 1.5 3-7-7-4c-.6 2-2.6 3.3-5 3.3S11.6 6 11 4z" fill="#7a3fc0" stroke="#f2b705" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span><span class="brand-name">Áo Tím</span><span class="brand-sub">Hà Nội FC fan site</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="HomePage.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="history.html"><i class="bi bi-clock-history me-1"></i>History</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="fanzone.html"><i class="bi bi-patch-question me-1"></i>Fan Zone</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html"><i class="bi bi-play-btn me-1"></i>Media</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="read-progress" aria-hidden="true"><div id="read-bar"></div></div>
+<main>
+  <header class="page-hero" style="background-image:url('img/trophy-cabinet.jpg')">
+    <div class="container">
+      <span class="eyebrow eyebrow-gold">Page 2 of 5 · Timeline · Lịch sử</span>
+      <h1>Club history</h1>
+      <p>From a third-division start in 2006 to six V.League titles. Filter the timeline, jump to a year, or open any entry to read more.</p>
+    </div>
+  </header>
+
+  <section class="container py-4 py-lg-5">
+    <div class="panel mb-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-lg-7">
+          <div class="d-flex flex-wrap gap-2" role="group" aria-label="Filter the timeline">
+            <button type="button" class="chip-btn" data-cat="all" aria-pressed="true">All <span class="opacity-75" data-count-for="all"></span></button>
+            <button type="button" class="chip-btn" data-cat="trophy" aria-pressed="false"><i class="bi bi-trophy me-1"></i>Trophies <span class="opacity-75" data-count-for="trophy"></span></button>
+            <button type="button" class="chip-btn" data-cat="club" aria-pressed="false"><i class="bi bi-flag me-1"></i>Club milestones <span class="opacity-75" data-count-for="club"></span></button>
+            <button type="button" class="chip-btn" data-cat="stadium" aria-pressed="false"><i class="bi bi-building me-1"></i>Stadium <span class="opacity-75" data-count-for="stadium"></span></button>
+          </div>
+        </div>
+        <div class="col-sm-7 col-lg-3">
+          <label class="visually-hidden" for="jump">Jump to a year</label>
+          <select class="form-select" id="jump"><option value="">Jump to a year…</option></select>
+        </div>
+        <div class="col-sm-5 col-lg-2 d-grid">
+          <button type="button" class="btn btn-outline-primary" id="toggle-all" aria-pressed="false"><i class="bi bi-arrows-expand me-1"></i>Expand all</button>
+        </div>
+      </div>
+    </div>
+
+    <ol class="timeline" id="timeline">
+      <li class="tl-item" data-cat="stadium" id="y1934"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">1934</div><h3>A football ground in the city <span class="tl-tag">Stadium</span></h3>
+        <p>Football is first played on the site that becomes Hàng Đẫy.</p>
+        <div class="collapse" id="more-1934"><p class="tl-more">A 400-seat wooden stand and surrounding walls followed in 1936–38, when the ground was known as SEPTO Stadium.</p><img src="img/hang-day-stand.jpg" alt="The street beneath the main stand at Hàng Đẫy, with broadcast vans parked" loading="lazy"><p class="photo-credit mt-1 mb-0">Hàng Đẫy today, beneath the main stand. Photo: Jspeed1310, public domain, via <a href="https://commons.wikimedia.org/wiki/File:S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_H%C3%A0ng_%C4%90%E1%BA%ABy_2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-1934" aria-expanded="false" aria-controls="more-1934">Read more</button>
+      </div></li>
+
+      <li class="tl-item" data-cat="stadium" id="y1958"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">1958</div><h3>Hàng Đẫy as we know it <span class="tl-tag">Stadium</span></h3>
+        <p>Rebuilt from 1956, the stadium reopened on 24 August 1958.</p>
+        <div class="collapse" id="more-1958"><p class="tl-more">Until Mỹ Đình National Stadium was built it was Vietnam’s main football venue, and it hosted the final of the 1998 Tiger Cup.</p><img src="img/hang-day-stadium.jpg" alt="Hàng Đẫy Stadium with its blue stands" loading="lazy"><p class="photo-credit mt-1 mb-0">Hàng Đẫy Stadium. Photo: Jspeed1310, public domain, via <a href="https://commons.wikimedia.org/wiki/File:S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_H%C3%A0ng_%C4%90%E1%BA%ABy.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-1958" aria-expanded="false" aria-controls="more-1958">Read more</button>
+      </div></li>
+
+      <li class="tl-item" data-cat="club" id="y2006"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2006</div><h3>T&amp;T Hà Nội is founded <span class="tl-tag">Club</span></h3>
+        <p>Set up on 18 June 2006 by T&amp;T Group, the club won the Third Division in its very first season.</p>
+        <div class="collapse" id="more-2006"><p class="tl-more">The club played as T&amp;T Hà Nội until 2009, then as Hà Nội T&amp;T until 2016.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2006" aria-expanded="false" aria-controls="more-2006">Read more</button>
+      </div></li>
+
+      <li class="tl-item" data-cat="club" id="y2007"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2007</div><h3>Up again <span class="tl-tag">Club</span></h3>
+        <p>Runners-up in the Second Division, for a second promotion in two years.</p>
+        <div class="collapse" id="more-2007"><p class="tl-more">Three divisions in three seasons was the plan, and it worked.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2007" aria-expanded="false" aria-controls="more-2007">Read more</button>
+      </div></li>
+
+      <li class="tl-item" data-cat="club" id="y2008"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2008</div><h3>Promoted to the V.League <span class="tl-tag">Club</span></h3>
+        <p>Runners-up in the First Division, earning a top-flight place from 2009.</p>
+        <div class="collapse" id="more-2008"><p class="tl-more">The club has stayed in the top flight ever since.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2008" aria-expanded="false" aria-controls="more-2008">Read more</button>
+      </div></li>
+
+      <li class="tl-item" data-cat="stadium" id="y2009"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2009</div><h3>Moving into Hàng Đẫy <span class="tl-tag">Stadium</span></h3>
+        <p>The first V.League season, played at the ground the club still calls home.</p>
+        <div class="collapse" id="more-2009"><p class="tl-more">That year all four Hà Nội–based clubs used Hàng Đẫy. Công an Hà Nội still share it today, so a capital derby can be played there whichever side is at home.</p><img src="img/tt-hanoi-2009.jpg" alt="T&amp;T Hà Nội playing away at Khánh Hòa in the 2009 V.League" loading="lazy"><p class="photo-credit mt-1 mb-0">T&amp;T Hà Nội away at Khánh Hòa in the 2009 V.League. Photo: Vinhtantran, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, cropped, via <a href="https://commons.wikimedia.org/wiki/File:V-League_2009,_K.Khanh_Hoa_vs._T%26T_Ha_Noi.JPG" target="_blank" rel="noopener">Wikimedia Commons</a>.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2009" aria-expanded="false" aria-controls="more-2009">Read more</button>
+      </div></li>
+
+      <li class="tl-item trophy" data-cat="trophy" id="y2010"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2010</div><h3>First V.League title <span class="tl-tag">Champions</span></h3>
+        <p>Champions in only the second top-flight season, playing as Hà Nội T&amp;T.</p>
+        <div class="collapse" id="more-2010"><p class="tl-more">The Vietnamese Super Cup followed in the same year.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2010" aria-expanded="false" aria-controls="more-2010">Read more</button>
+      </div></li>
+
+      <li class="tl-item trophy" data-cat="trophy" id="y2013"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2013</div><h3>Second title <span class="tl-tag">Champions</span></h3>
+        <p>Champions of Vietnam for the second time.</p>
+        <div class="collapse" id="more-2013"><p class="tl-more">In the 2014 AFC Cup the club reached the quarter-finals, losing 3–0 on aggregate to Erbil.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2013" aria-expanded="false" aria-controls="more-2013">Read more</button>
+      </div></li>
+
+      <li class="tl-item" data-cat="club" id="y2014"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2014</div><h3>Samson’s 23 goals <span class="tl-tag">Club</span></h3>
+        <p>Hoàng Vũ Samson finished as the V.League’s top scorer with 23 goals.</p>
+        <div class="collapse" id="more-2014"><p class="tl-more">Four years later he scored twice on the day the 2018 title was sealed.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2014" aria-expanded="false" aria-controls="more-2014">Read more</button>
+      </div></li>
+
+      <li class="tl-item trophy" data-cat="trophy" id="y2016"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2016</div><h3>Third title, and a new name <span class="tl-tag">Champions</span></h3>
+        <p>The club became Hà Nội FC, the name it still uses.</p>
+        <div class="collapse" id="more-2016"><p class="tl-more">It was also runner-up in the National Cup that year.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2016" aria-expanded="false" aria-controls="more-2016">Read more</button>
+      </div></li>
+
+      <li class="tl-item trophy" data-cat="trophy" id="y2018"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2018</div><h3>Champions with five rounds to spare <span class="tl-tag">Champions</span></h3>
+        <p>Hoàng Vũ Samson scored twice on 9 September 2018 to seal the title after round 21 of 26.</p>
+        <div class="collapse" id="more-2018"><p class="tl-more">Academy graduate Nguyễn Quang Hải won the Vietnamese Golden Ball, and the Super Cup was won too.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2018" aria-expanded="false" aria-controls="more-2018">Read more</button>
+      </div></li>
+
+      <li class="tl-item trophy" data-cat="trophy" id="y2019"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2019</div><h3>League, Cup and Asia <span class="tl-tag">Champions</span></h3>
+        <p>A fifth V.League title and the club’s first National Cup.</p>
+        <div class="collapse" id="more-2019"><p class="tl-more">In the AFC Cup the club won the ASEAN zone and beat Nagaworld 10–0, its biggest ever win, before losing the inter-zone final to April 25 on away goals. Đỗ Hùng Dũng won the 2019 Golden Ball.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2019" aria-expanded="false" aria-controls="more-2019">Read more</button>
+      </div></li>
+
+      <li class="tl-item trophy" data-cat="trophy" id="y2020"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2020</div><h3>Cup and Super Cup <span class="tl-tag">Champions</span></h3>
+        <p>The National Cup and the Super Cup again.</p>
+        <div class="collapse" id="more-2020"><p class="tl-more">Captain Nguyễn Văn Quyết won the 2020 Vietnamese Golden Ball, his first.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2020" aria-expanded="false" aria-controls="more-2020">Read more</button>
+      </div></li>
+
+      <li class="tl-item trophy" data-cat="trophy" id="y2022"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2022</div><h3>The double <span class="tl-tag">Champions</span></h3>
+        <p>A sixth V.League title, the most of any club since the league began in 2000, plus the National Cup.</p>
+        <div class="collapse" id="more-2022"><p class="tl-more">The 2022 Super Cup completed the set of domestic trophies.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2022" aria-expanded="false" aria-controls="more-2022">Read more</button>
+      </div></li>
+
+      <li class="tl-item" data-cat="club" id="y2023"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2023</div><h3>Always in the top three <span class="tl-tag">Club</span></h3>
+        <p>Second in 2023, third in 2023/24 and second in 2024/25.</p>
+        <div class="collapse" id="more-2023"><p class="tl-more">The club also played in the group stage of the 2023/24 AFC Champions League.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2023" aria-expanded="false" aria-controls="more-2023">Read more</button>
+      </div></li>
+
+      <li class="tl-item" data-cat="club" id="y2025"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2025</div><h3>Harry Kewell takes charge <span class="tl-tag">Club</span></h3>
+        <p>The former Leeds United and Liverpool winger was appointed head coach on 4 October 2025.</p>
+        <div class="collapse" id="more-2025"><p class="tl-more">His first season ended in fourth place with 46 points.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2025" aria-expanded="false" aria-controls="more-2025">Read more</button>
+      </div></li>
+
+      <li class="tl-item" data-cat="club" id="y2026"><span class="tl-dot"></span><div class="tl-card reveal">
+        <div class="tl-year">2026</div><h3>A derby to remember <span class="tl-tag">Club</span></h3>
+        <p>A 2–1 win over Công an Hà Nội on 18 October ended their unbeaten start to the season.</p>
+        <div class="collapse" id="more-2026"><p class="tl-more">Phạm Xuân Mạnh scored after 18 minutes, and Nguyễn Văn Tùng restored the lead soon after Công an Hà Nội equalised.</p></div>
+        <button class="btn btn-link btn-sm px-0" type="button" data-bs-toggle="collapse" data-bs-target="#more-2026" aria-expanded="false" aria-controls="more-2026">Read more</button>
+      </div></li>
+    </ol>
+    <p class="text-center text-secondary mt-2 mb-0" id="tl-empty" hidden>No entries in this category.</p>
+  </section>
+</main>
+
+<!-- ===== Footer (same on every page) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-4"><strong>Áo Tím</strong><div>Unofficial Hà Nội FC fan site</div></div>
+      <div class="col-md-8 text-md-end">
+        Not affiliated with Hà Nội FC, T&amp;T Group or the V.League. Facts checked 8 November 2026.
+      </div>
+    </div>
+  </div>
+</footer>
+<button type="button" id="to-top" class="btn btn-gold rounded-circle" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>

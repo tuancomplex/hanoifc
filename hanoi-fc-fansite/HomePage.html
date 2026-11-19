@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Áo Tím · Hà Nội FC Fan Site</title>
+  <meta name="description" content="Áo Tím, an unofficial fan site for Hà Nội FC: results, history, gallery, quiz and media.">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Navigation (same on every page) ===== -->
+<nav class="navbar navbar-expand-lg navbar-at sticky-top" data-bs-theme="dark" aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand" href="HomePage.html">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 4l-7 4 3 7 3-1.5V28h12V13.5l3 1.5 3-7-7-4c-.6 2-2.6 3.3-5 3.3S11.6 6 11 4z" fill="#7a3fc0" stroke="#f2b705" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span><span class="brand-name">Áo Tím</span><span class="brand-sub">Hà Nội FC fan site</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto gap-lg-1">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="HomePage.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html"><i class="bi bi-clock-history me-1"></i>History</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="fanzone.html"><i class="bi bi-patch-question me-1"></i>Fan Zone</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html"><i class="bi bi-play-btn me-1"></i>Media</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- ===== Hero ===== -->
+  <header class="home-hero">
+    <div class="container">
+      <div class="row g-4 g-lg-5 align-items-center">
+        <div class="col-lg-7">
+          <span class="badge-unofficial">Unofficial fan site</span>
+          <h1><span class="shimmer">Áo <span>Tím</span></span></h1>
+          <p class="lead mb-4" style="max-width:46ch">For supporters of Hà Nội FC, “Đội bóng áo tím”, the club in purple. Six V.League titles, the capital’s derbies, and every result of the 2026/27 season.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-gold btn-lg" href="media.html"><i class="bi bi-play-circle-fill me-2"></i>Watch the season reel</a>
+            <button type="button" class="btn btn-ghost-light btn-lg" data-bs-toggle="modal" data-bs-target="#joinModal"><i class="bi bi-person-plus me-2"></i>Join the fan club</button>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <section class="match-card" aria-labelledby="next-h">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="eyebrow eyebrow-gold" id="next-h">Next match · V.League 2026/27</span>
+              <span class="badge text-bg-light">Away</span>
+            </div>
+            <p class="teams mb-1">Đồng Nai City <span class="text-white-50">v</span> <span style="color:var(--at-gold)">Hà Nội FC</span></p>
+            <p class="mb-3 text-white-50 small"><i class="bi bi-calendar-event me-1"></i>Saturday 21 November 2026 · 18:00 (Vietnam time)</p>
+            <div class="countdown" id="countdown" aria-live="off">
+              <div><b id="cd-d">--</b><span>Days</span></div>
+              <div><b id="cd-h">--</b><span>Hours</span></div>
+              <div><b id="cd-m">--</b><span>Mins</span></div>
+              <div><b id="cd-s">--</b><span>Secs</span></div>
+            </div>
+            <p class="small text-white-50 mt-2 mb-3" id="cd-note">Counting down to kick-off.</p>
+            <button type="button" class="btn btn-outline-light btn-sm w-100" data-demo="Demo only: on a live site this would send you a reminder one hour before kick-off. No reminder has been set.">
+              <i class="bi bi-bell me-1"></i>Remind me before kick-off
+            </button>
+          </section>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Results ticker (CSS animation; hover to pause) ===== -->
+  <div class="ticker" aria-label="Latest results">
+    <div class="ticker-track">
+      <span>R7 · HAGL <b>2–1</b> Hà Nội FC</span><span>R6 · Hà Nội FC <b>2–1</b> Ninh Bình</span><span>R5 · SHB Đà Nẵng <b>1–0</b> Hà Nội FC</span><span>R4 · Công an Hà Nội <b>1–2</b> Hà Nội FC</span><span>R3 · Hà Nội FC <b>1–0</b> Bắc Ninh</span><span>R2 · Hà Nội FC <b>1–4</b> Sông Lam Nghệ An</span><span>R1 · Công an TP.HCM <b>3–1</b> Hà Nội FC</span>
+      <span aria-hidden="true">R7 · HAGL <b>2–1</b> Hà Nội FC</span><span aria-hidden="true">R6 · Hà Nội FC <b>2–1</b> Ninh Bình</span><span aria-hidden="true">R5 · SHB Đà Nẵng <b>1–0</b> Hà Nội FC</span><span aria-hidden="true">R4 · Công an Hà Nội <b>1–2</b> Hà Nội FC</span><span aria-hidden="true">R3 · Hà Nội FC <b>1–0</b> Bắc Ninh</span><span aria-hidden="true">R2 · Hà Nội FC <b>1–4</b> Sông Lam Nghệ An</span><span aria-hidden="true">R1 · Công an TP.HCM <b>3–1</b> Hà Nội FC</span>
+    </div>
+  </div>
+
+  <!-- ===== Honours counters ===== -->
+  <section class="stat-strip" aria-label="Club honours">
+    <div class="container py-3">
+      <div class="row g-3 row-cols-2 row-cols-md-4">
+        <div class="col"><div class="stat"><b data-count="6">6</b><span>V.League titles</span></div></div>
+        <div class="col"><div class="stat"><b data-count="3">3</b><span>National Cups</span></div></div>
+        <div class="col"><div class="stat"><b data-count="5">5</b><span>Super Cups</span></div></div>
+        <div class="col"><div class="stat"><b data-count="2006">2006</b><span>Founded 18 June</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Season so far ===== -->
+  <section class="container py-5" aria-labelledby="season-h">
+    <div class="row g-4">
+      <div class="col-lg-8 reveal">
+        <span class="eyebrow">Mùa giải 2026/27</span>
+        <h2 class="section-title" id="season-h">Results so far</h2>
+        <div class="d-flex flex-wrap gap-2 mb-3" role="group" aria-label="Filter results">
+          <button type="button" class="chip-btn" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip-btn" data-filter="w" aria-pressed="false">Wins</button>
+          <button type="button" class="chip-btn" data-filter="l" aria-pressed="false">Defeats</button>
+          <span class="ms-auto align-self-center small text-secondary" id="result-count">Showing 7 of 7</span>
+        </div>
+        <div class="table-responsive">
+          <table class="table results-table align-middle mb-0">
+            <thead><tr><th scope="col">Rd</th><th scope="col">Date</th><th scope="col">H/A</th><th scope="col">Opponent</th><th scope="col" class="text-end">Score</th><th scope="col" class="text-center">Result</th></tr></thead>
+            <tbody id="results-body">
+              <tr data-res="l"><td>R1</td><td class="tabular">5 Sep</td><td><span class="ha-badge" title="Away">A</span></td><td>Công an TP.HCM</td><td class="score text-end">1–3</td><td class="text-center"><span class="res-pill l">L</span></td></tr>
+              <tr data-res="l"><td>R2</td><td class="tabular">12 Sep</td><td><span class="ha-badge" title="Home">H</span></td><td>Sông Lam Nghệ An</td><td class="score text-end">1–4</td><td class="text-center"><span class="res-pill l">L</span></td></tr>
+              <tr data-res="w"><td>R3</td><td class="tabular">11 Oct</td><td><span class="ha-badge" title="Home">H</span></td><td>Bắc Ninh <small class="text-secondary d-block">Andrew Jung 78′, at Mỹ Đình</small></td><td class="score text-end">1–0</td><td class="text-center"><span class="res-pill w">W</span></td></tr>
+              <tr data-res="w"><td>R4</td><td class="tabular">18 Oct</td><td><span class="ha-badge" title="Away">A</span></td><td>Công an Hà Nội <small class="text-secondary d-block">Capital derby: Xuân Mạnh 18′, Văn Tùng</small></td><td class="score text-end">2–1</td><td class="text-center"><span class="res-pill w">W</span></td></tr>
+              <tr data-res="l"><td>R5</td><td class="tabular">25 Oct</td><td><span class="ha-badge" title="Away">A</span></td><td>SHB Đà Nẵng <small class="text-secondary d-block">Ten men from the 18th minute</small></td><td class="score text-end">0–1</td><td class="text-center"><span class="res-pill l">L</span></td></tr>
+              <tr data-res="w"><td>R6</td><td class="tabular">30 Oct</td><td><span class="ha-badge" title="Home">H</span></td><td>Ninh Bình <small class="text-secondary d-block">Faurand-Tournaire winner at 90+1′</small></td><td class="score text-end">2–1</td><td class="text-center"><span class="res-pill w">W</span></td></tr>
+              <tr data-res="l"><td>R7</td><td class="tabular">7 Nov</td><td><span class="ha-badge" title="Away">A</span></td><td>Hoàng Anh Gia Lai <small class="text-secondary d-block">Văn Quyết penalty 36′</small></td><td class="score text-end">1–2</td><td class="text-center"><span class="res-pill l">L</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small text-secondary mt-2 mb-0">Scores are shown with Hà Nội FC’s goals first.</p>
+      </div>
+      <div class="col-lg-4 reveal">
+        <div class="panel mb-3">
+          <span class="eyebrow">After 7 games</span>
+          <div class="d-flex gap-3 mt-2 text-center">
+            <div class="flex-fill"><div class="font-display" style="font-size:2.6rem">3</div><small class="text-secondary">Won</small></div>
+            <div class="flex-fill"><div class="font-display" style="font-size:2.6rem">4</div><small class="text-secondary">Lost</small></div>
+            <div class="flex-fill"><div class="font-display" style="font-size:2.6rem">8–12</div><small class="text-secondary">Goals</small></div>
+            <div class="flex-fill rounded-2" style="background:var(--at-gold)"><div class="font-display" style="font-size:2.6rem">9</div><small>Points</small></div>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="eyebrow">Last season · 2025/26</span>
+          <h3 class="h5 mt-2 mb-1">4th place, 46 points</h3>
+          <p class="mb-2 text-secondary">Won 14, drew 4, lost 8. Công an Hà Nội won the title with 64 points.</p>
+          <p class="mb-0 text-secondary">Đỗ Hoàng Hên scored 11 league goals, joint second in the scoring chart.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Explore the site ===== -->
+  <section class="sash-band py-5" aria-labelledby="explore-h">
+    <div class="container">
+      <span class="eyebrow eyebrow-gold">Khám phá · Explore</span>
+      <h2 class="section-title" id="explore-h">Four more pages</h2>
+      <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-lg-4">
+        <div class="col reveal"><a class="at-card d-block text-decoration-none text-reset" href="history.html"><img src="img/trophy-cabinet.jpg" alt="A lit cabinet full of trophies" loading="lazy"><div class="p-3"><span class="eyebrow">Timeline</span><h3 class="card-title mt-1">History</h3><p class="text-secondary mb-2">From 2006 to six titles. Filter the story and open each year.</p><span class="stretched-hint">Open the timeline →</span></div></a></div>
+        <div class="col reveal"><a class="at-card d-block text-decoration-none text-reset" href="gallery.html"><img src="img/supporters-drums.jpg" alt="Supporters in yellow raincoats playing drums" loading="lazy"><div class="p-3"><span class="eyebrow">Filterable gallery</span><h3 class="card-title mt-1">Gallery</h3><p class="text-secondary mb-2">Fourteen real photos. Filter, zoom and save favourites.</p><span class="stretched-hint">Browse the gallery →</span></div></a></div>
+        <div class="col reveal"><a class="at-card d-block text-decoration-none text-reset" href="fanzone.html"><img src="img/tactics-board.jpg" alt="A coach holding a tactics board beside the pitch" loading="lazy"><div class="p-3"><span class="eyebrow">Quiz &amp; poll</span><h3 class="card-title mt-1">Fan Zone</h3><p class="text-secondary mb-2">Ten questions, a player poll and a score predictor.</p><span class="stretched-hint">Play the quiz →</span></div></a></div>
+        <div class="col reveal"><a class="at-card d-block text-decoration-none text-reset" href="media.html"><img src="img/season-reel-poster.jpg" alt="Title frame of the Áo Tím season reel" loading="lazy"><div class="p-3"><span class="eyebrow">Video, audio, animation</span><h3 class="card-title mt-1">Media</h3><p class="text-secondary mb-2">The season reel, stadium drums and an animated tactics board.</p><span class="stretched-hint">Watch and listen →</span></div></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Carousel + fan club ===== -->
+  <section class="container py-5" aria-labelledby="highlights-h">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7 reveal">
+        <span class="eyebrow">From the gallery</span>
+        <h2 class="section-title" id="highlights-h">Highlights</h2>
+        <div id="homeCarousel" class="carousel slide rounded-3 overflow-hidden" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="img/tt-hanoi-2009.jpg" class="d-block w-100" alt="T&amp;T Hà Nội playing away at Khánh Hòa in the 2009 V.League"><div class="carousel-caption"><strong>2009, the first V.League season.</strong> The club, then T&amp;T Hà Nội, away at Khánh Hòa.</div></div>
+            <div class="carousel-item"><img src="img/hang-day-stadium.jpg" class="d-block w-100" alt="Hàng Đẫy Stadium with its blue stands"><div class="carousel-caption"><strong>Hàng Đẫy.</strong> Our home since 2009.</div></div>
+            <div class="carousel-item"><img src="img/fans-stand.jpg" class="d-block w-100" alt="Vietnamese supporters in red filling a stand"><div class="carousel-caption"><strong>A sea of red.</strong> Vietnamese fans at the 2019 AFC Asian Cup.</div></div>
+            <div class="carousel-item"><img src="img/fans-flags.jpg" class="d-block w-100" alt="Fans with Vietnamese flags outside the Hà Nội Opera House"><div class="carousel-caption"><strong>Flags in the city.</strong> Fans gather by the Hà Nội Opera House.</div></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+        </div>
+      </div>
+      <div class="col-lg-5 reveal">
+        <div class="panel p-4">
+          <span class="eyebrow">Hội cổ động viên</span>
+          <h2 class="section-title">Join the fan club</h2>
+          <p class="text-secondary">Get match reminders, away-day news and an invite to the next fan meet-up. It takes thirty seconds.</p>
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Free monthly newsletter</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Matchday meet-up points</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Vote in the player of the month poll</li>
+          </ul>
+          <button type="button" class="btn btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#joinModal"><i class="bi bi-person-plus me-2"></i>Open the sign-up form</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Join modal with a validated form ===== -->
+<div class="modal fade" id="joinModal" tabindex="-1" aria-labelledby="joinTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <form id="joinForm" novalidate>
+        <div class="modal-header">
+          <h2 class="modal-title fs-4 font-display" id="joinTitle">Join the Áo Tím fan club</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="jf-name" class="form-label">Your name</label>
+              <input type="text" class="form-control" id="jf-name" name="name" required minlength="2" autocomplete="name">
+              <div class="invalid-feedback">Please enter your name (at least 2 letters).</div>
+            </div>
+            <div class="col-md-6">
+              <label for="jf-email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="jf-email" name="email" required autocomplete="email" placeholder="you@example.com">
+              <div class="invalid-feedback">Please enter a valid email address, like name@example.com.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="jf-player" class="form-label">Favourite player</label>
+              <select class="form-select" id="jf-player" name="player" required>
+                <option value="" selected>Choose a player…</option>
+                <option>Nguyễn Văn Quyết</option>
+                <option>Đỗ Hùng Dũng</option>
+                <option>Nguyễn Hai Long</option>
+                <option>Phạm Xuân Mạnh</option>
+                <option>Đỗ Hoàng Hên</option>
+                <option>Aymeric Faurand-Tournaire</option>
+                <option>Someone else</option>
+              </select>
+              <div class="invalid-feedback">Please pick a player.</div>
+            </div>
+            <div class="col-md-6">
+              <span class="form-label d-block">Membership</span>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="tier" id="jf-tier1" value="Newsletter" required>
+                <label class="form-check-label" for="jf-tier1">Newsletter only</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="tier" id="jf-tier2" value="Matchday" required>
+                <label class="form-check-label" for="jf-tier2">Matchday member</label>
+                <div class="invalid-feedback">Please choose a membership type.</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="jf-msg" class="form-label">Anything else? <span class="text-secondary">(optional)</span></label>
+              <textarea class="form-control" id="jf-msg" name="message" rows="2" maxlength="300"></textarea>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="jf-agree" required>
+                <label class="form-check-label" for="jf-agree">I understand this is an unofficial fan club, not run by Hà Nội FC.</label>
+                <div class="invalid-feedback">Please tick this box to continue.</div>
+              </div>
+            </div>
+          </div>
+          <p class="small text-secondary mt-3 mb-0"><i class="bi bi-info-circle me-1"></i>Demo form: your details are checked in the browser but not sent or saved anywhere.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Join the club</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Footer (same on every page) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-4"><strong>Áo Tím</strong><div>Unofficial Hà Nội FC fan site</div></div>
+      <div class="col-md-8 text-md-end">
+        Not affiliated with Hà Nội FC, T&amp;T Group or the V.League. Facts checked 8 November 2026.
+      </div>
+    </div>
+  </div>
+</footer>
+<button type="button" id="to-top" class="btn btn-gold rounded-circle" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

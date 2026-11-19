@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media · Áo Tím</title>
+  <meta name="description" content="Season reel video, stadium audio and an animated tactics board.">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Navigation (same on every page) ===== -->
+<nav class="navbar navbar-expand-lg navbar-at sticky-top" data-bs-theme="dark" aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand" href="HomePage.html">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 4l-7 4 3 7 3-1.5V28h12V13.5l3 1.5 3-7-7-4c-.6 2-2.6 3.3-5 3.3S11.6 6 11 4z" fill="#7a3fc0" stroke="#f2b705" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span><span class="brand-name">Áo Tím</span><span class="brand-sub">Hà Nội FC fan site</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="HomePage.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html"><i class="bi bi-clock-history me-1"></i>History</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="fanzone.html"><i class="bi bi-patch-question me-1"></i>Fan Zone</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="media.html"><i class="bi bi-play-btn me-1"></i>Media</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <header class="page-hero" style="background-image:url('img/floodlights.jpg')">
+    <div class="container">
+      <span class="eyebrow eyebrow-gold">Page 5 of 5 · Video, audio and animation · Đa phương tiện</span>
+      <h1>Media</h1>
+      <p>Watch the 2026/27 season reel, listen to the Hàng Đẫy drums, and play an animated tactics board.</p>
+    </div>
+  </header>
+
+  <!-- ===== Video ===== -->
+  <section class="container py-4 py-lg-5" aria-labelledby="video-h">
+    <span class="eyebrow">Video</span>
+    <h2 class="section-title" id="video-h">Season reel 2026/27</h2>
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="video-frame">
+          <video id="reel" controls preload="metadata" poster="img/season-reel-poster.jpg" playsinline>
+            <source src="media/season-reel.webm" type="video/webm">
+            <source src="media/season-reel.mp4" type="video/mp4">
+            Your browser can’t play this video. The season reel shows Hà Nội FC’s first seven results of 2026/27.
+          </video>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel h-100">
+          <h3 class="h6 eyebrow mb-2">Jump to a match</h3>
+          <div class="chapter-list" id="chapters">
+            <button type="button" class="chip-btn" data-t="0">Intro</button>
+            <button type="button" class="chip-btn" data-t="3.2">R1 · CA TP.HCM</button>
+            <button type="button" class="chip-btn" data-t="6.2">R2 · SLNA</button>
+            <button type="button" class="chip-btn" data-t="9.2">R3 · Bắc Ninh</button>
+            <button type="button" class="chip-btn" data-t="12.2">R4 · Derby</button>
+            <button type="button" class="chip-btn" data-t="15.2">R5 · Đà Nẵng</button>
+            <button type="button" class="chip-btn" data-t="18.2">R6 · Ninh Bình</button>
+            <button type="button" class="chip-btn" data-t="21.2">R7 · HAGL</button>
+            <button type="button" class="chip-btn" data-t="24.2">Summary</button>
+          </div>
+          <p class="small text-secondary mt-3 mb-2">28 seconds, with the drum track as its soundtrack. Click a match to jump straight to it.</p>
+          <p class="small text-secondary mb-0"><i class="bi bi-stars me-1"></i>AI-generated: the reel was animated with code. It contains no match footage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Audio ===== -->
+  <section class="sash-band py-5" aria-labelledby="audio-h">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <span class="eyebrow eyebrow-gold">Audio</span>
+          <h2 class="section-title" id="audio-h">Sounds of Hàng Đẫy</h2>
+          <p class="mb-3" style="max-width:52ch">Two short tracks made for this site. The drums play the rhythm you hear from the home end, and the ambience track builds to the referee’s whistle.</p>
+          <p class="small mb-0 opacity-75"><i class="bi bi-stars me-1"></i>AI-generated: both tracks were synthesised with code. No crowd was recorded.</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="player" id="player">
+            <div id="tracklist">
+              <button type="button" class="track" data-src="media/hang-day-drums" aria-current="true"><i class="bi bi-music-note-beamed fs-4"></i><span><strong>Hàng Đẫy drums</strong><small>Supporters’ drum rhythm over the crowd · 0:40</small></span></button>
+              <button type="button" class="track" data-src="media/kickoff-ambience" aria-current="false"><i class="bi bi-megaphone fs-4"></i><span><strong>Kick-off ambience</strong><small>Crowd murmur and the referee’s whistle · 0:30</small></span></button>
+            </div>
+            <div class="d-flex align-items-center gap-3 mt-3">
+              <button type="button" class="btn btn-gold play-btn" id="a-play" aria-label="Play"><i class="bi bi-play-fill"></i></button>
+              <div class="flex-grow-1">
+                <label class="visually-hidden" for="a-seek">Position in track</label>
+                <input type="range" class="form-range" id="a-seek" min="0" max="100" step="0.1" value="0">
+                <div class="d-flex justify-content-between time"><span id="a-cur">0:00</span><span id="a-dur">0:00</span></div>
+              </div>
+              <div class="eq" id="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="d-flex align-items-center gap-2 mt-2">
+              <button type="button" class="btn btn-sm btn-outline-light" id="a-mute" aria-pressed="false" aria-label="Mute"><i class="bi bi-volume-up"></i></button>
+              <label class="visually-hidden" for="a-vol">Volume</label>
+              <input type="range" class="form-range flex-grow-1" id="a-vol" min="0" max="1" step="0.05" value="0.8" style="max-width:180px">
+              <button type="button" class="btn btn-sm btn-outline-light ms-auto" id="a-loop" aria-pressed="false"><i class="bi bi-repeat me-1"></i>Loop off</button>
+            </div>
+            <audio id="audio" preload="metadata"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Animation ===== -->
+  <section class="container py-5" aria-labelledby="anim-h">
+    <span class="eyebrow">Animation</span>
+    <h2 class="section-title" id="anim-h">Tactics board: a counter-attack</h2>
+    <p class="lead-muted mb-3">An animated illustration of a fast break from a 4-2-3-1, drawn on a canvas. It is a teaching example, not a replay of a real goal.</p>
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <canvas class="board-canvas" id="board" width="960" height="600" role="img" aria-label="Tactics board animation of a counter-attack ending in a goal"></canvas>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel">
+          <p class="fw-semibold mb-2" id="b-step" aria-live="polite">Press Play to start the move.</p>
+          <div class="d-flex gap-2 mb-3">
+            <button type="button" class="btn btn-primary flex-fill" id="b-play"><i class="bi bi-play-fill me-1"></i>Play</button>
+            <button type="button" class="btn btn-outline-primary" id="b-replay"><i class="bi bi-arrow-counterclockwise me-1"></i>Replay</button>
+          </div>
+          <label class="form-label small" for="b-scrub">Scrub through the move</label>
+          <input type="range" class="form-range" id="b-scrub" min="0" max="8" step="0.01" value="0">
+          <label class="form-label small mt-2" for="b-speed">Speed</label>
+          <select class="form-select" id="b-speed">
+            <option value="0.5">0.5× slow motion</option>
+            <option value="1" selected>1× normal</option>
+            <option value="2">2× fast</option>
+          </select>
+          <ul class="small text-secondary mt-3 mb-0 ps-3">
+            <li><span style="color:#b98300">Gold</span>: our team, attacking left to right</li>
+            <li>White with red ring: opponents</li>
+            <li>Dashed line: the ball’s path</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Footer (same on every page) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-4"><strong>Áo Tím</strong><div>Unofficial Hà Nội FC fan site</div></div>
+      <div class="col-md-8 text-md-end">
+        Not affiliated with Hà Nội FC, T&amp;T Group or the V.League. Facts checked 8 November 2026.
+      </div>
+    </div>
+  </div>
+</footer>
+<button type="button" id="to-top" class="btn btn-gold rounded-circle" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/media.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery · Áo Tím</title>
+  <meta name="description" content="A filterable gallery of Hà Nội FC and matchday photos.">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Navigation (same on every page) ===== -->
+<nav class="navbar navbar-expand-lg navbar-at sticky-top" data-bs-theme="dark" aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand" href="HomePage.html">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 4l-7 4 3 7 3-1.5V28h12V13.5l3 1.5 3-7-7-4c-.6 2-2.6 3.3-5 3.3S11.6 6 11 4z" fill="#7a3fc0" stroke="#f2b705" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span><span class="brand-name">Áo Tím</span><span class="brand-sub">Hà Nội FC fan site</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="HomePage.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html"><i class="bi bi-clock-history me-1"></i>History</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="fanzone.html"><i class="bi bi-patch-question me-1"></i>Fan Zone</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html"><i class="bi bi-play-btn me-1"></i>Media</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <header class="page-hero" style="background-image:url('img/fans-flags.jpg')">
+    <div class="container">
+      <span class="eyebrow eyebrow-gold">Page 3 of 5 · Filterable gallery · Thư viện ảnh</span>
+      <h1>Gallery</h1>
+      <p>Fourteen real photos: Hàng Đẫy, the club’s first V.League season, fans and matchday. Filter by topic, search the captions, open any photo full size, and tap the heart to keep your favourites.</p>
+    </div>
+  </header>
+
+  <section class="container py-4 py-lg-5">
+    <div class="panel mb-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-lg-8">
+          <div class="d-flex flex-wrap gap-2" role="group" aria-label="Filter pictures" id="g-filters">
+            <button type="button" class="chip-btn" data-cat="all" aria-pressed="true">All</button>
+            <button type="button" class="chip-btn" data-cat="stadium" aria-pressed="false">Stadium</button>
+            <button type="button" class="chip-btn" data-cat="matchday" aria-pressed="false">Matchday</button>
+            <button type="button" class="chip-btn" data-cat="fans" aria-pressed="false">Fans</button>
+            <button type="button" class="chip-btn" data-cat="kits" aria-pressed="false">Kits</button>
+            <button type="button" class="chip-btn" data-cat="trophies" aria-pressed="false">Trophies</button>
+            <button type="button" class="chip-btn" data-cat="fav" aria-pressed="false"><i class="bi bi-heart-fill text-danger me-1"></i>Favourites <span id="fav-count">(0)</span></button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="input-group">
+            <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+            <label class="visually-hidden" for="g-search">Search captions</label>
+            <input type="search" class="form-control" id="g-search" placeholder="Search captions, e.g. fans">
+          </div>
+        </div>
+      </div>
+      <p class="small text-secondary mt-3 mb-0" id="g-status" aria-live="polite">Showing 14 of 14 photos</p>
+    </div>
+
+    <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-lg-3" id="g-grid"></div>
+
+    <div class="text-center py-5" id="g-empty" hidden>
+      <p class="mb-3 text-secondary">No photos match. Try another word or show everything again.</p>
+      <button type="button" class="btn btn-primary" id="g-reset">Show all photos</button>
+    </div>
+  </section>
+</main>
+
+<!-- Lightbox -->
+<div class="modal fade lightbox" id="lightbox" tabindex="-1" aria-labelledby="lb-title" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="lb-title">Picture</h2>
+        <span class="ms-3 small text-white-50" id="lb-counter"></span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img id="lb-img" src="img/hang-day-stadium.jpg" alt="">
+        <p class="mt-3 mb-1" id="lb-desc"></p>
+        <p class="small text-white-50 mb-0" id="lb-credit"></p>
+      </div>
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-outline-light" id="lb-prev"><i class="bi bi-chevron-left"></i> Previous</button>
+        <button type="button" class="btn btn-outline-light" id="lb-fav" aria-pressed="false"><i class="bi bi-heart me-1"></i>Favourite</button>
+        <button type="button" class="btn btn-outline-light" id="lb-next">Next <i class="bi bi-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Footer (same on every page) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-4"><strong>Áo Tím</strong><div>Unofficial Hà Nội FC fan site</div></div>
+      <div class="col-md-8 text-md-end">
+        Not affiliated with Hà Nội FC, T&amp;T Group or the V.League. Facts checked 8 November 2026.
+      </div>
+    </div>
+  </div>
+</footer>
+<button type="button" id="to-top" class="btn btn-gold rounded-circle" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>
